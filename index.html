@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid Art Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <canvas id="canvas"></canvas>
+        <div id="ui-container">
+            <h1>Fluid Art Simulator</h1>
+            <div class="control-group">
+                <label for="resolution">Resolution:</label>
+                <select id="resolution">
+                    <option value="64">64x64</option>
+                    <option value="128" selected>128x128</option>
+                    <option value="256">256x256</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <button id="reset-btn">Reset</button>
+                <button id="pause-btn">Pause</button>
+            </div>
+            <div class="control-group">
+                <label>Tool:</label>
+                <button id="tool-brush" class="tool-btn active">Brush</button>
+                <button id="tool-eraser" class="tool-btn">Eraser</button>
+            </div>
+            <div class="control-group">
+                <label for="color-picker">Color:</label>
+                <input type="color" id="color-picker" value="#ff0000">
+            </div>
+            <div class="control-group">
+                <label for="brush-size">Brush Size:</label>
+                <input type="range" id="brush-size" min="1" max="50" value="10">
+            </div>
+             <div class="control-group">
+                <label for="viscosity">Viscosity:</label>
+                <input type="range" id="viscosity" min="0" max="0.001" step="0.00001" value="0.00001">
+            </div>
+            <div class="control-group">
+                <label for="diffusion">Diffusion:</label>
+                <input type="range" id="diffusion" min="0" max="0.001" step="0.00001" value="0.00001">
+            </div>
+            <div class="control-group">
+                <button id="undo-btn">Undo</button>
+                <button id="redo-btn">Redo</button>
+            </div>
+            <div class="control-group">
+                <button id="export-btn">Export PNG</button>
+                <button id="record-btn">Start Recording</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
